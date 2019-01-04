@@ -1,3 +1,7 @@
 body, html, #App {
     height: 100%;
 }
+
+#password {
+    overflow-wrap: break-word;
+}
