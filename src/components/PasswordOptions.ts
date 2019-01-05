@@ -85,7 +85,7 @@ export default (initialVnode: any) => {
                         m(".input-group-prepend", [
                             m("span.input-group-text", "Word list URL")
                         ]),
-                        m("input.form-control.text-right", {
+                        m("input#wordListUrl.form-control", {
                             placeholder: options.wordListUrl || vnode.attrs.wordListUrl
                         })
                     ])

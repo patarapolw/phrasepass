@@ -2,6 +2,15 @@ body, html, #App {
     height: 100%;
 }
 
+.github-corner {
+    z-index: 100;
+}
+
+#wordListUrl {
+    text-align: right;
+    direction: rtl;
+}
+
 #password {
     overflow-wrap: break-word;
 }
