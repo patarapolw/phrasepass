@@ -31,7 +31,7 @@ const copyToClipboard = (str: string) => {
 
 export default (initialVnode: any) => {
     let password = "GeneratedPasswordWillBeHere#*@)(#*)";
-    let wordListUrl = "eff_large_wordlist.txt"
+    let wordListUrl = location.origin + "/eff_large_wordlist.txt"
 
     const numbersString = "0123456789";
     const punctuationsString = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
