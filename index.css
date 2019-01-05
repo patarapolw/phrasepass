@@ -2,7 +2,7 @@ body, html, #App {
     height: 100%;
 }
 
-.github-corner {
+.github-corner > svg {
     z-index: 100;
 }
 
