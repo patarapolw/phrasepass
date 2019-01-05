@@ -28,7 +28,7 @@ export default (initialVnode: any) => {
                             placeholder: options.numberOfWords,
                             oninput(e: any) {
                                 const v = parseInt(e.target.value);
-                                if (isNaN(v)) return false;
+                                if (isNaN(v) || v > 10 || v < 1) return false;
     
                                 options.numberOfWords = v;
                                 e.target.value = v;
@@ -44,7 +44,7 @@ export default (initialVnode: any) => {
                             placeholder: options.numberOfPunctuations,
                             oninput(e: any) {
                                 const v = parseInt(e.target.value);
-                                if (isNaN(v)) return false;
+                                if (isNaN(v) || v > 5 || v < 0) return false;
     
                                 options.numberOfPunctuations = v;
                                 e.target.value = v;
@@ -60,7 +60,7 @@ export default (initialVnode: any) => {
                             placeholder: options.numberOfDigits,
                             oninput(e: any) {
                                 const v = parseInt(e.target.value);
-                                if (isNaN(v)) return false;
+                                if (isNaN(v) || v > 5 || v < 0) return false;
     
                                 options.numberOfDigits = v;
                                 e.target.value = v;
