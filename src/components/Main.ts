@@ -33,7 +33,7 @@ export default (initialVnode: any) => {
     const baseUrl = "https://patarapolw.github.io/phrasepass"
 
     let password = "GeneratedPasswordWillBeHere#*@)(#*)";
-    let wordListUrl = location.origin === baseUrl ? baseUrl : location.origin + "/eff_large_wordlist.txt"
+    let wordListUrl = location.origin === baseUrl ? location.origin : baseUrl + "/eff_large_wordlist.txt"
 
     const numbersString = "0123456789";
     const punctuationsString = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
