@@ -7,6 +7,7 @@ export default (initialVnode: any) => {
         numberOfDigits: 2,
         wordListUrl: undefined
     };
+    const defaultOptions = JSON.parse(JSON.stringify(options));
     let rememberMe: boolean = false;
 
     return {
@@ -26,13 +27,17 @@ export default (initialVnode: any) => {
                         ]),
                         m("input.form-control", {
                             placeholder: options.numberOfWords,
-                            oninput(e: any) {
-                                const v = parseInt(e.target.value);
-                                if (isNaN(v) || v > 10 || v < 1) return false;
-    
-                                options.numberOfWords = v;
-                                e.target.value = v;
-                                return true;
+                            onkeypress(e: any) {
+                                const oldV = e.target.value;
+
+                                setTimeout(() => {
+                                    const v = parseInt(e.target.value || defaultOptions.numberOfWords);
+                                    if (isNaN(v) || v > 10 || v < 1) {
+                                        e.target.value = oldV;
+                                        return;
+                                    }
+                                    options.numberOfWords = v;
+                                }, 100);
                             }
                         })
                     ]),
@@ -42,13 +47,17 @@ export default (initialVnode: any) => {
                         ]),
                         m("input.form-control", {
                             placeholder: options.numberOfPunctuations,
-                            oninput(e: any) {
-                                const v = parseInt(e.target.value);
-                                if (isNaN(v) || v > 5 || v < 0) return false;
-    
-                                options.numberOfPunctuations = v;
-                                e.target.value = v;
-                                return true;
+                            onkeypress(e: any) {
+                                const oldV = e.target.value;
+
+                                setTimeout(() => {
+                                    const v = parseInt(e.target.value || defaultOptions.numberOfPunctuations);
+                                    if (isNaN(v) || v > 5 || v < 1) {
+                                        e.target.value = oldV;
+                                        return;
+                                    }
+                                    options.numberOfPunctuations = v;
+                                }, 100);
                             }
                         })
                     ]),
@@ -58,13 +67,17 @@ export default (initialVnode: any) => {
                         ]),
                         m("input.form-control", {
                             placeholder: options.numberOfDigits,
-                            oninput(e: any) {
-                                const v = parseInt(e.target.value);
-                                if (isNaN(v) || v > 5 || v < 0) return false;
-    
-                                options.numberOfDigits = v;
-                                e.target.value = v;
-                                return true;
+                            onkeypress(e: any) {
+                                const oldV = e.target.value;
+
+                                setTimeout(() => {
+                                    const v = parseInt(e.target.value || defaultOptions.numberOfDigits);
+                                    if (isNaN(v) || v > 5 || v < 1) {
+                                        e.target.value = oldV;
+                                        return;
+                                    }
+                                    options.numberOfDigits = v;
+                                }, 100);
                             }
                         })
                     ]),
