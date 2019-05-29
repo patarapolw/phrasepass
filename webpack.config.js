@@ -27,9 +27,7 @@ const config = {
   },
   devServer: {
     open: true
-  },
-  mode: "production",
-  devtool: "source-map"
+  }
 }
 
 module.exports = config;
