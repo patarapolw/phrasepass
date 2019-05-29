@@ -6,4 +6,4 @@ Generate password from passphrase from only JavaScript. No data is sent to serve
 
 ## How it works
 
-How the phrasepass generator works can be seen at [/src/index.ts#L89](/src/index.ts#L89)
+How the phrasepass generator works can be seen at [/src/index.ts#L139](/src/index.ts#L139)
