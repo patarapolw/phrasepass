@@ -1,0 +1,48 @@
+.row#pp-options-area
+  .col-12(style="margin-top: 0")
+    .col-12.mt-3
+      .input-group
+        .input-group-prepend
+          span.input-group-text
+            | Preset
+        select#pp-select-preset.custom-select
+          option(value='Long compliant') Long compliant
+          option(value='Long simple') Long simple
+          option(value='Short compliant') Short compliant
+          option(value='Short simple') Short simple
+          option(value='', selected='') Custom
+    #pp-div-custom.mt-3.col-12
+      .col-md-4
+        .input-group
+          .input-group-prepend
+            span.input-group-text
+              | Number of words
+          input#pp-input-number-of-words.form-control
+      .col-md-4
+        .input-group
+          .input-group-prepend
+            span.input-group-text
+              | Number of punctuations
+          input#pp-input-number-of-punctuations.form-control
+      .col-md-4
+        .input-group
+          .input-group-prepend
+            span.input-group-text
+              | Number of digits
+          input#pp-input-number-of-digits.form-control
+    .mt-3
+      .input-group.col-auto.mt-3
+        .input-group-prepend
+          span.input-group-text
+            | Word list URL
+        input#pp-input-word-list-url.form-control
+    .mt-3
+      .col-auto
+        .form-check.float-right
+          input#pp-input-remember-me.form-check-input(type='checkbox')
+          label.form-check-label.mr-3(for='pp-input-remember-me') Remember Me
+          button#pp-button-generate-password.btn.btn-primary
+            | Generate Password
+.row#pp-password-area(style="justify-content: center; align-items: center")
+  h1#pp-password.text-monospace
+    | Password will appear here.
