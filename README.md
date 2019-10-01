@@ -10,4 +10,4 @@ How the phrasepass generator works can be seen at [/src/index.ts#L139](/src/inde
 
 ## Password manager
 
-To get an Android password manager, see <https://github.com/patarapolw/keepassdroid-memorable-password>
+To get an Android password manager, see <https://github.com/patarapolw/KeePassDX-diceware>
